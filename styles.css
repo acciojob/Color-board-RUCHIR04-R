@@ -21,5 +21,6 @@ body {
 }
 
 .square:hover {
-    background-color: #3498db;
+    background-color: rgb(29, 29, 29);
 }
+
