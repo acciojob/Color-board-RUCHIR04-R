@@ -1,23 +1,37 @@
-/*  your css code here. If applicable */
+/* styles.css */
+
 body {
+    background-color: #111; /* Dark background */
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(40, 20px); /* 40 columns */
-    grid-template-rows: repeat(20, 20px); /* 20 rows */
-    gap: 2px; /* Space between boxes */
+    grid-template-columns: repeat(40, 1fr); /* 40 columns */
+    gap: 2px; /* Small gap between boxes */
 }
 
 .square {
-    width: 20px;
-    height: 20px;
-    background-color: #ffffff; /* Default color */
-    transition: background-color 0.5s ease; /* Smooth transition */
+    width: 20px; /* Width of each box */
+    height: 20px; /* Height of each box */
+    background-color: #222; /* Default box color */
+    transition: background-color 0.5s; /* Smooth transition */
+}
+
+.square:hover {
+    background-color: rgba(255, 255, 0, 0.7); /* Change color on hover */
+    animation: fadeOut 1s forwards; /* Trigger fade out animation */
+}
+
+@keyframes fadeOut {
+    from {
+        background-color: rgba(255, 255, 0, 0.7); /* Starting color */
+    }
+    to {
+        background-color: #222; /* Reset color */
+    }
 }
